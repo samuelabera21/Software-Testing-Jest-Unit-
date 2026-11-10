@@ -1,0 +1,17 @@
+{
+  "name": "university-testing-lab",
+  "version": "1.0.0",
+  "description": "Advanced Jest Unit Testing Laboratory",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
+    "test:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --coverage --runInBand",
+    "test:mutation:scholarship": "npx stryker run stryker.scholarship.config.json",
+    "test:mutation:payment": "npx stryker run stryker.payment.config.json"
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^10.1.1",
+    "@stryker-mutator/jest-runner": "^10.1.1",
+    "jest": "^30.0.0"
+  }
+}
