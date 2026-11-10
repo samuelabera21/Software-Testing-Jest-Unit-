@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "testRunner": "command",
+  "commandRunner": {
+    "command": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js tests/unit/08-payment.test.js tests/unit/14-payment-mutation.test.js --runInBand"
+  },
+  "mutate": ["src/08-payment.js", "src/14-payment.js"],
+  "concurrency": 1,
+  "reporters": ["json", "clear-text", "html"],
+  "coverageAnalysis": "off"
+}
+
