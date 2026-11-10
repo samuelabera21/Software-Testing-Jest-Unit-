@@ -1,0 +1,11 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "testRunner": "command",
+  "commandRunner": {
+    "command": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js tests/unit/07-scholarship.test.js tests/unit/12-scholarship-mutation.test.js --runInBand"
+  },
+  "mutate": ["src/07-scholarship.js", "src/12-scholarship.js"],
+  "concurrency": 1,
+  "reporters": ["json", "clear-text", "html"],
+  "coverageAnalysis": "off"
+}
